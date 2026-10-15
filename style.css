@@ -1,0 +1,67 @@
+/* Shared stylesheet for Home and the future Game Shelf page. */
+:root {
+  --paper: #fbf7ef;
+  --ink: #30291f;
+  --green: #354a36;
+  --muted: #665b4b;
+  --line: #d6cbb9;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+a { color: var(--green); text-underline-offset: 5px; }
+a:hover { text-decoration-thickness: 3px; }
+a:focus-visible { outline: 3px solid #98621c; outline-offset: 5px; }
+img { display: block; max-width: 100%; }
+h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; line-height: 1.2; }
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin: 12px 0 24px; }
+h2 { font-size: clamp(1.9rem, 3vw, 2.5rem); margin: 8px 0 28px; }
+h3 { font-size: 1.4rem; margin: 0 0 16px; }
+p { margin: 0 0 18px; }
+.site-header, main, .site-footer { width: min(1120px, 90%); margin-inline: auto; }
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 14px; font-weight: bold; text-decoration: none; }
+.brand img { width: 86px; height: 86px; object-fit: contain; border-radius: 12px; }
+nav { display: flex; gap: 24px; flex-wrap: wrap; }
+nav a { font-weight: bold; }
+nav a[aria-current='page'] { text-decoration-thickness: 3px; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; padding: 60px 0; }
+.eyebrow { color: var(--green); font-weight: bold; font-size: .85rem; letter-spacing: .06em; }
+.cafe-image { width: 100%; height: 480px; object-fit: cover; border-radius: 18px; }
+.button { display: inline-block; padding: 12px 22px; background: var(--green); color: white; border-radius: 6px; font-weight: bold; text-decoration: none; }
+.button:hover { background: #253727; }
+.section { padding: 44px 0; border-top: 1px solid var(--line); }
+.menu-grid, .visit { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.menu-list { margin: 0; }
+.menu-list div { display: flex; justify-content: space-between; gap: 18px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.menu-list dd { margin: 0; white-space: nowrap; font-weight: bold; }
+.event-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.event-time { color: var(--green); font-weight: bold; }
+address { font-style: normal; overflow-wrap: anywhere; }
+table { width: 100%; border-collapse: collapse; }
+caption { text-align: left; color: var(--muted); margin-bottom: 12px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+th { font-weight: bold; }
+.site-footer { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.site-footer p { margin: 0; }
+@media (max-width: 760px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .hero, .menu-grid, .visit, .event-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero { padding: 36px 0; }
+  .cafe-image { height: auto; }
+  .section { padding: 32px 0; }
+  .hours { font-size: .94rem; }
+}

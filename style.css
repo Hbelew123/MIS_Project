@@ -64,7 +64,8 @@ th { font-weight: bold; }
   .cafe-image { height: auto; }
   .section { padding: 32px 0; }
   .hours { font-size: .94rem; }
-  .brand span {
-  font-size: 80px;
+  .site-header .brand span {
+  font-size: 32px;
+  line-height: 1.2;
 }
 }
